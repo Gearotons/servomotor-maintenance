@@ -1,8 +1,31 @@
 # Motor Maintenance
 
-Browser-based management tool for Gearotons servomotors. Detect, inspect, alias,
-test and update motors on an RS485 bus straight from Chrome — no install, no
-backend.
+### ➜ Jump straight to maintaining your servomotors: **[motor-maintenance.gearotons.com](https://motor-maintenance.gearotons.com)**
+
+Nothing to install. Open the link, plug in your RS485 adapter, and the page finds
+every motor on the bus.
+
+**Supported browsers** — the Web Serial API is required, so a Chromium-based
+desktop browser is essential:
+
+| Browser | Supported |
+| --- | --- |
+| Chrome (desktop) | yes |
+| Edge (desktop) | yes |
+| Opera (desktop) | yes |
+| Brave, Arc, Vivaldi and other Chromium browsers | yes |
+| Safari | no |
+| Firefox | no |
+| Any browser on iOS or Android | no |
+
+Safari and Firefox have not implemented Web Serial, and no iOS browser can —
+they all run on Safari's engine. Phones and tablets can still open the site and
+explore the built-in simulator, but cannot talk to a motor.
+
+---
+
+Browser-based management tool for Gearotons M17 servomotors. Detect, inspect,
+alias, test and update motors on an RS485 bus — no install, no backend.
 
 See [PLAN.md](PLAN.md) for the design, what was verified, and open questions.
 
@@ -23,8 +46,16 @@ Serial works without HTTPS during development.
 
 ## Deploy
 
-Static files. Upload `app/` to any static host. Requires HTTPS (Web Serial is
-secure-context only) — and note the hostname caveat at the top of PLAN.md.
+Static files with no build step. This repository is published by GitHub Pages
+from `docs/` on `main`, so a push to `main` is the release — including new
+firmware, which is fetched live from the
+[servomotor](https://github.com/tomrodinger/servomotor) repository rather than
+bundled here.
+
+Any static host works. Two requirements: **HTTPS**, because Web Serial is
+secure-context only, and a hostname with **no underscore** — underscores are
+prohibited in certificate SAN entries, so such a name can never obtain a
+certificate and `navigator.serial` would not exist.
 
 ## Verify the protocol layer
 
