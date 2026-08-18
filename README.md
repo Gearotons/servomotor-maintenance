@@ -1,9 +1,10 @@
 # Motor Maintenance
 
+## **Browser-based management tool for Gearotons M17 servomotors. Detect, inspect, alias, test and update motors on an RS485 bus — no install, no backend.**
+
 ### ➜ Jump straight to maintaining your servomotors: **[motor-maintenance.gearotons.com](https://motor-maintenance.gearotons.com)**
 
-Nothing to install. Open the link, plug in your RS485 adapter, and the page finds
-every motor on the bus.
+Open the link, plug in your RS485 adapter, and the page finds every motor on the bus.
 
 **Supported browsers** — the Web Serial API is required, so a Chromium-based
 desktop browser is essential:
@@ -23,9 +24,6 @@ they all run on Safari's engine. Phones and tablets can still open the site and
 explore the built-in simulator, but cannot talk to a motor.
 
 ---
-
-Browser-based management tool for Gearotons M17 servomotors. Detect, inspect,
-alias, test and update motors on an RS485 bus — no install, no backend.
 
 See [PLAN.md](PLAN.md) for the design, what was verified, and open questions.
 
