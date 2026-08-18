@@ -10,13 +10,13 @@ desktop browser is essential:
 
 | Browser | Supported |
 | --- | --- |
-| Chrome (desktop) | yes |
-| Edge (desktop) | yes |
-| Opera (desktop) | yes |
-| Brave, Arc, Vivaldi and other Chromium browsers | yes |
-| Safari | no |
-| Firefox | no |
-| Any browser on iOS or Android | no |
+| ✅ Chrome (desktop) | yes |
+| ✅ Edge (desktop) | yes |
+| ✅ Opera (desktop) | yes |
+| ✅ Brave, Arc, Vivaldi and other Chromium browsers | yes |
+| ❌ Safari | no |
+| ❌ Firefox | no |
+| ❌ Any browser on iOS or Android | no |
 
 Safari and Firefox have not implemented Web Serial, and no iOS browser can —
 they all run on Safari's engine. Phones and tablets can still open the site and
