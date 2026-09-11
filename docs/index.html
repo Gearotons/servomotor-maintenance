@@ -30,6 +30,7 @@
 <!-- ─────────────────────────────── welcome ─────────────────────────────── -->
 <main id="welcome" class="welcome">
   <div class="welcome-inner">
+    <img class="welcome-logo" src="assets/gearotons_logo_dark.svg" alt="Gearotons" width="294" height="79">
     <h1>Connect your motors.<br><span class="accent">Everything else is one click.</span></h1>
     <p class="lede">
       Plug in your RS485 adapter and this page will find every motor on the bus, read its
@@ -42,6 +43,12 @@
     <p class="hint" id="connectHint">Chrome, Edge or Opera on desktop. Your browser talks to the motors directly — nothing is uploaded.</p>
     <div id="connectError" class="banner banner-err welcome-error" hidden></div>
     <p class="hint"><button class="linkbtn" id="demoBtn">or explore with three simulated motors →</button></p>
+    <nav class="welcome-links" aria-label="More from Gearotons">
+      <a href="https://9o.at/">Documentation</a>
+      <a href="https://tutorial.gearotons.com/">Tutorial</a>
+      <a href="https://gearotons.com/store">Store</a>
+      <a class="welcome-links-feedback" href="https://tutorial.gearotons.com/feedback">Send feedback</a>
+    </nav>
 
     <ul class="feature-row">
       <li><b>Detect</b><span>Every motor on the bus, by unique ID</span></li>
